@@ -1,0 +1,17 @@
+// Задание2. Инверсия старших
+// На вход программе подается беззнаковое 32-битное целое число N. Требуется изменить значения всех битов старшего байта числа на противоположные и вывести полученное таким образом число.
+#include <stdio.h>
+#include <stdint.h>
+uint32_t worker(uint32_t);
+int main ()
+{
+uint32_t n, result;
+    scanf("%u", &n);
+    result = worker (n);
+    printf("%u\n", result);
+    return 0;
+}
+uint32_t worker (uint32_t n);
+{
+    return N ^ 0xFF000000;
+}
